@@ -12,9 +12,15 @@ New-LocalUser -Name Peter -Password (ConvertTo-SecureString "Pa$$w0rd" -AsPlainT
 ## Networking
 
 ## Administration
-
+Ping sweep: 
+```
+FOR /L %i IN (1,1,254) DO ping -a -n 1 192.168.10.%i | FIND /i "Reply">>c:\ipaddresses.txt
+```
 ## Printers
-
+Printer list:
+```
+wmic printer list brief
+```
 ## Tasks
 View tasks:
 ```
